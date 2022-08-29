@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+</head>
+<body>
+    <h1>Qual país você nasceu?</h1>
+    Informe o país que você nasceu: <input type="text" name="pais" id="ipais">
+    <input type="button" value="Verificar" onclick="validar()">
+    <div id="res"></div>
+
+    <script>
+        function validar() {
+            var txt = window.document.querySelector('input#ipais')
+            res.innerHTML = `<p>O país informado é: <strong>${txt}</strong>!!!</p>`
+            if (txt == Brasil) {
+                res.innerHTML = `<p>Neste caso você é <strong>Brasileiro!</strong></p>`
+            } else {
+                res.innerHTML = `<p>Neste caso você é estrangeiro.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
